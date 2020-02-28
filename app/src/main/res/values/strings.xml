@@ -5,4 +5,10 @@
     <string name="favourites">favourites</string>
     <string name="email">email</string>
     <string name="directions">directions</string>
+    <string name="my_app_default_argument">my app default argument</string>
+    <string name="fav_selected">favourites selected</string>
+    <string name="direction_selected">directions selected</string>
+    <string name="user_email">d4dharam@gmail.com</string>
+    <string name="location_list">Location List</string>
+    <string name="location_details">Location Detail</string>
 </resources>

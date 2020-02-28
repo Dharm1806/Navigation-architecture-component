@@ -31,7 +31,6 @@ class LocationListFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(LocationListViewModel::class.java)
 
-        activity?.title = "Location List"
         list_item.setOnClickListener {
 
             val action = LocationListFragmentDirections.locationlisttodetail("my app default argument")

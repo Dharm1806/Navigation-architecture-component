@@ -27,7 +27,6 @@ class LocationDetailFragment : Fragment() {
         override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(LocationDetailViewModel::class.java)
-        activity?.title = "Location Details"
 
         Log.e("receivedBundle", "${LocationDetailFragmentArgs.fromBundle(arguments!!).primitiveArgument}")
         // TODO: Use the ViewModel

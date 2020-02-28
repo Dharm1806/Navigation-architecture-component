@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/locationlistfragment"
         android:name="com.example.navigationcomponentsample.LocationListFragment"
-        android:label="Location List "
+        android:label="@string/location_list"
         tools:layout="@layout/location_list_fragment">
 
 
@@ -19,7 +19,7 @@
     <fragment
         android:id="@+id/locationdetailsfragment"
         android:name="com.example.navigationcomponentsample.LocationDetailFragment"
-        android:label="Location Detail "
+        android:label="@string/location_details"
         tools:layout="@layout/location_detail_fragment">
         <argument
             android:name="primitive_argument"

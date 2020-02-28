@@ -46,10 +46,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         when(p0.itemId){
             R.id.first ->
                 if(navController.currentDestination?.id != R.id.locationdetailsfragment){
-                    val action = LocationListFragmentDirections.locationlisttodetail("my app default argument")
+                    val action = LocationListFragmentDirections.locationlisttodetail(getString(R.string.my_app_default_argument))
                     navController.navigate(action)}
-            R.id.second -> showMessage("favourites selected")
-            R.id.third -> showMessage("directions selected")
+            R.id.second -> showMessage(getString(R.string.fav_selected))
+            R.id.third -> showMessage(getString(R.string.direction_selected))
 
         }
 
