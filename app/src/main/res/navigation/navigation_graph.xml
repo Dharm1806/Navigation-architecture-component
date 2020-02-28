@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/locationlistfragment">
+
+    <fragment
+        android:id="@+id/locationlistfragment"
+        android:name="com.example.navigationcomponentsample.LocationListFragment"
+        android:label="Location List "
+        tools:layout="@layout/location_list_fragment">
+
+
+        <action
+            android:id="@+id/locationlisttodetail"
+            app:destination="@id/locationdetailsfragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/locationdetailsfragment"
+        android:name="com.example.navigationcomponentsample.LocationDetailFragment"
+        android:label="Location Detail "
+        tools:layout="@layout/location_detail_fragment">
+        <argument
+            android:name="primitive_argument"
+            android:defaultValue="appname"
+            app:argType="string" />
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="https://www.navigation.com/locationdetails?primitive_argument={primitive_argument}" />
+
+    </fragment>
+
+</navigation>

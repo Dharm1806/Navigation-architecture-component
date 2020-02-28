@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/first"
+            android:icon="@android:drawable/ic_dialog_email"
+            android:title="@string/email" />
+
+        <item
+            android:id="@+id/second"
+            android:icon="@android:drawable/btn_star_big_off"
+            android:title="@string/favourites" />
+
+        <item
+            android:id="@+id/third"
+            android:icon="@android:drawable/ic_menu_directions"
+            android:title="@string/directions" />
+
+    </group>
+
+</menu>

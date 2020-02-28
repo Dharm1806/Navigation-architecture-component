@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NavigationComponentSample</string>
+    <string name="hello_location_list">hello location list</string>
+    <string name="hello_location_details">hello location details</string>
+    <string name="favourites">favourites</string>
+    <string name="email">email</string>
+    <string name="directions">directions</string>
+</resources>
