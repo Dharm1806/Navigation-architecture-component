@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/body_margin_start"
+    android:layout_marginTop="@dimen/body_margin_top"
+    android:layout_marginEnd="@dimen/body_margin_start"
+    android:layout_marginBottom="@dimen/body_margin_top"
+    android:orientation="vertical"
+    app:cardElevation="@dimen/body_margin_start">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/issue_item_margin"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_issue_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/title_size"
+            />
+        <TextView
+            android:id="@+id/item_issue_updated_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:layout_marginStart="@dimen/profile_margin_end"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/time_text_size"
+            />
+
+        <TextView
+            android:id="@+id/item_issue_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/body_margin_start"
+            android:layout_marginTop="@dimen/body_margin_top"
+            android:fontFamily="sans-serif"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/issues_body_size" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

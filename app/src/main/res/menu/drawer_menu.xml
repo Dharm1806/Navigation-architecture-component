@@ -4,17 +4,17 @@
     <group android:checkableBehavior="single">
 
         <item
-            android:id="@+id/first"
+            android:id="@+id/email"
             android:icon="@android:drawable/ic_dialog_email"
             android:title="@string/email" />
 
         <item
-            android:id="@+id/second"
+            android:id="@+id/favourites"
             android:icon="@android:drawable/btn_star_big_off"
             android:title="@string/favourites" />
 
         <item
-            android:id="@+id/third"
+            android:id="@+id/directions"
             android:icon="@android:drawable/ic_menu_directions"
             android:title="@string/directions" />
 

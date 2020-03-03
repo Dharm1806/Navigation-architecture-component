@@ -1,14 +1,16 @@
 <resources>
-    <string name="app_name">NavigationComponentSample</string>
-    <string name="hello_location_list">hello location list</string>
-    <string name="hello_location_details">hello location details</string>
-    <string name="favourites">favourites</string>
-    <string name="email">email</string>
-    <string name="directions">directions</string>
-    <string name="my_app_default_argument">my app default argument</string>
-    <string name="fav_selected">favourites selected</string>
-    <string name="direction_selected">directions selected</string>
-    <string name="user_email">d4dharam@gmail.com</string>
-    <string name="location_list">Location List</string>
-    <string name="location_details">Location Detail</string>
+    <string name="app_name">GithubIssues</string>
+    <string name="mssg_no_comment_found">No comment found on this issue</string>
+    <string name="ok_button">ok</string>
+    <string name="please_wait">Please Wait ...</string>
+    <string name="something_went_wrong_please_try_again">Something went wrong please try again</string>
+    <string name="email_slected">Email selected</string>
+    <string name="fav_selected">Favourites selected</string>
+    <string name="direction_selected">Direction Selected</string>
+    <string name="user_email">email</string>
+    <string name="issue_list">Recently Updated Issues List</string>
+    <string name="comments">Comments</string>
+    <string name="email">Email</string>
+    <string name="favourites">Favourites</string>
+    <string name="directions">Directions</string>
 </resources>

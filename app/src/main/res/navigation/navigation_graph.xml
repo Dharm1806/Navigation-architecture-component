@@ -2,32 +2,32 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/locationlistfragment">
+    app:startDestination="@id/issuesList">
 
     <fragment
-        android:id="@+id/locationlistfragment"
-        android:name="com.example.navigationcomponentsample.LocationListFragment"
-        android:label="@string/location_list"
-        tools:layout="@layout/location_list_fragment">
+        android:id="@+id/issuesList"
+        android:name="com.example.navigationcomponentsample.views.IssuesListFragment"
+        android:label="@string/issue_list"
+        tools:layout="@layout/issues_list_fragment">
 
 
         <action
-            android:id="@+id/locationlisttodetail"
-            app:destination="@id/locationdetailsfragment" />
+            android:id="@+id/issuesListToComment"
+            app:destination="@id/commentList" />
     </fragment>
 
     <fragment
-        android:id="@+id/locationdetailsfragment"
-        android:name="com.example.navigationcomponentsample.LocationDetailFragment"
-        android:label="@string/location_details"
-        tools:layout="@layout/location_detail_fragment">
+        android:id="@+id/commentList"
+        android:name="com.example.navigationcomponentsample.views.IssueDetailFragment"
+        android:label="@string/comments"
+        tools:layout="@layout/issue_detail_fragment">
         <argument
-            android:name="primitive_argument"
-            android:defaultValue="appname"
+            android:name="issue_number"
+            android:defaultValue="1234"
             app:argType="string" />
         <deepLink
             android:id="@+id/deepLink"
-            app:uri="https://www.navigation.com/locationdetails?primitive_argument={primitive_argument}" />
+            app:uri="https://www.navigation.com/locationdetails?issue_number={issue_number}" />
 
     </fragment>
 

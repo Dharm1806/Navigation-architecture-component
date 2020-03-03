@@ -1,4 +1,4 @@
-package com.example.navigationcomponentsample
+package com.example.navigationcomponentsample.views
 
 import android.os.Bundle
 import android.view.MenuItem
@@ -10,6 +10,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
+import com.example.navigationcomponentsample.R
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -44,12 +45,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         drawerLayout.closeDrawers()
 
         when(p0.itemId){
-            R.id.first ->
-                if(navController.currentDestination?.id != R.id.locationdetailsfragment){
-                    val action = LocationListFragmentDirections.locationlisttodetail(getString(R.string.my_app_default_argument))
-                    navController.navigate(action)}
-            R.id.second -> showMessage(getString(R.string.fav_selected))
-            R.id.third -> showMessage(getString(R.string.direction_selected))
+            R.id.email ->showMessage(getString(R.string.email_slected))
+                /*if(navController.currentDestination?.id != R.id.locationdetailsfragment){
+                    val action =
+                        LocationListFragmentDirections.locationlisttodetail(getString(R.string.my_app_default_argument))
+                    navController.navigate(action)}*/
+            R.id.favourites -> showMessage(getString(R.string.fav_selected))
+            R.id.directions -> showMessage(getString(R.string.direction_selected))
 
         }
 
