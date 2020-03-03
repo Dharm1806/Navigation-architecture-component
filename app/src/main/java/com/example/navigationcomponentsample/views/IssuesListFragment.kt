@@ -151,7 +151,6 @@ class IssuesListFragment : Fragment(), OnItemClickListener {
 
     //hide the progressbar
     private fun hideProgressbar() {
-
         progressBar.visibility = View.GONE
     }
 

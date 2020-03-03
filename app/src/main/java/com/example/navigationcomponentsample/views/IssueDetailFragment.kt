@@ -10,20 +10,14 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dharam.githubissues.repository.model.Comments
-import com.dharam.githubissues.repository.model.IssuesModel
 import com.example.navigationcomponentsample.R
 import com.example.navigationcomponentsample.viewmodel.CommentsListViewModel
-import com.example.navigationcomponentsample.viewmodel.uiData.CommentList
 import com.example.navigationcomponentsample.viewmodel.uiData.Resource
 import com.example.navigationcomponentsample.views.adapter.CommentsAdapter
 import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.disposables.Disposable
 import kotlinx.android.synthetic.main.issue_detail_fragment.*
 import kotlinx.android.synthetic.main.issue_detail_fragment.error_message
 import kotlinx.android.synthetic.main.issue_detail_fragment.progressBar
-import kotlinx.android.synthetic.main.issues_list_fragment.*
-import java.net.ConnectException
-import java.net.UnknownHostException
 
 
 class IssueDetailFragment : Fragment() {
@@ -114,7 +108,6 @@ class IssueDetailFragment : Fragment() {
 
     //hide the progressbar
     private fun hideProgressbar() {
-
         progressBar.visibility = View.GONE
     }
 
