@@ -14,10 +14,10 @@ class IssueHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     fun bind(issue: IssuesModel, clickListener: OnItemClickListener) {
 
-        //set item tile with first charactar capital
+        //set item tile with first character capital
         itemView.item_issue_title.text = issue.title.capitalize()
 
-        //set updated time of issue with refortmat date
+        //set updated time of issue with reformat date
         itemView.item_issue_updated_time.text = parseDate(issue.updated_at)
 
         val issueBody: String = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N)
@@ -53,7 +53,7 @@ class IssuesAdapter(private var issues: List<IssuesModel>,
     @Override
     override fun getItemCount(): Int = issues.size
 
-    //bind the viewholder
+    //bind the viewHolder
     @Override
     override fun onBindViewHolder(myHolder: IssueHolder, position: Int) =
             myHolder.bind(issues[position], itemClickListener)

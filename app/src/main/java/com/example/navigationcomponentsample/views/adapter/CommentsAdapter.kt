@@ -1,5 +1,6 @@
 package com.example.navigationcomponentsample.views.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,17 +15,18 @@ import kotlinx.android.synthetic.main.item_comment_list.view.*
 
 class MyCommentHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-    //bind data to itemview
+    //bind data to itemView
     fun bind(comments: Comments) {
         //set the author name of comment  with first letter in capital format
         itemView.user_name.text = comments.user.login.capitalize()
 
-        //set updated time of issue with refortmat date
+        //set updated time of issue with reformat date
         itemView.comment_updated_time.text = parseDate(comments.updated_at)
 
         // load the author profile image of comment
+        Log.e("user profile", ""+comments.user.avatar_url+".png")
         Glide.with(itemView)
-                .load(comments.user.avatar_url)
+                .load(comments.user.avatar_url+".png")
                 .fitCenter()
                 .apply(RequestOptions.circleCropTransform())
                 .placeholder(R.drawable.user_profile)
@@ -34,10 +36,10 @@ class MyCommentHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         //set the comment body
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N)
-            itemView.comment_body.setText(android.text.Html.fromHtml(comments.body,
-                    android.text.Html.FROM_HTML_MODE_COMPACT))
+            itemView.comment_body.text = android.text.Html.fromHtml(comments.body,
+                android.text.Html.FROM_HTML_MODE_COMPACT)
         else
-            itemView.comment_body.setText(android.text.Html.fromHtml(comments.body))
+            itemView.comment_body.text = android.text.Html.fromHtml(comments.body)
 
     }
 
@@ -48,7 +50,7 @@ class CommentsAdapter(var comments: List<Comments>) : RecyclerView.Adapter<MyCom
 
     @Override
     override fun onCreateViewHolder(parent: ViewGroup, position: Int): MyCommentHolder {
-        //inflate the itemview for comments
+        //inflate the itemView for comments
         val view = LayoutInflater.from(parent.context)
                 .inflate(R.layout.item_comment_list, parent, false)
         return MyCommentHolder(view)
@@ -58,10 +60,10 @@ class CommentsAdapter(var comments: List<Comments>) : RecyclerView.Adapter<MyCom
     @Override
     override fun getItemCount(): Int = comments.size
 
-    //function to bind the data to viewholder
+    //function to bind the data to viewHolder
     @Override
     override fun onBindViewHolder(myHolder: MyCommentHolder, position: Int) =
-            myHolder.bind(comments.get(position))
+            myHolder.bind(comments[position])
 }
 
 

@@ -1,14 +1,14 @@
 <resources>
     <string name="app_name">GithubIssues</string>
     <string name="mssg_no_comment_found">No comment found on this issue</string>
-    <string name="ok_button">ok</string>
-    <string name="please_wait">Please Wait ...</string>
+    <string name="ok_button">OK</string>
+    <string name="please_wait">Please Wait …</string>
     <string name="something_went_wrong_please_try_again">Something went wrong please try again</string>
     <string name="email_slected">Email selected</string>
     <string name="fav_selected">Favourites selected</string>
     <string name="direction_selected">Direction Selected</string>
     <string name="user_email">email</string>
-    <string name="issue_list">Recently Updated Issues List</string>
+    <string name="issue_list">Most Recently Updated Issues</string>
     <string name="comments">Comments</string>
     <string name="email">Email</string>
     <string name="favourites">Favourites</string>

@@ -1,13 +1,17 @@
 package com.example.navigationcomponentsample.views
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatTextView
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dharam.githubissues.repository.model.Comments
 import com.example.navigationcomponentsample.R
@@ -36,8 +40,7 @@ class IssueDetailFragment : Fragment() {
         override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
             //initialize view model
-            mCommentsListViewModel = ViewModelProviders.of(this)
-                .get(CommentsListViewModel::class.java)
+            mCommentsListViewModel = ViewModelProvider(this).get(CommentsListViewModel::class.java)
             number = IssueDetailFragmentArgs.fromBundle(arguments!!).issueNumber
             Log.e("receivedBundle", IssueDetailFragmentArgs.fromBundle(arguments!!).issueNumber)
 
@@ -50,12 +53,12 @@ class IssueDetailFragment : Fragment() {
             } )
             //retry to get comment list on click over the error message
             error_message.setOnClickListener { mCommentsListViewModel.getCommentList(number) }
-
+            //centerToolbarText()
     }
 
 
 
-    //onstop function of activity lifecycle
+    //onStop function of activity lifecycle
     @Override
     override fun onStop() {
         super.onStop()

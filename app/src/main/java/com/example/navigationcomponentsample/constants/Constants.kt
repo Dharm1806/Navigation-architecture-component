@@ -12,7 +12,6 @@ object Constants {
      const val COMMENT_LIST_END_POINTS ="repos/firebase/firebase-ios-sdk/issues/{number}/comments"
 
      const val EXTRA_NUMBER = "number"
-     const val ERROR_MESSAGE = "An error occurred"
 
      const val CACHE_TIME_IN_HOURS:Int = 24
      private const val SERVER_DATE_FORMAT  ="yyyy-MM-dd'T'HH:mm:ss'Z'"

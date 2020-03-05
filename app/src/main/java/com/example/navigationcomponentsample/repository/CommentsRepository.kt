@@ -3,7 +3,7 @@ import com.dharam.githubissues.repository.model.Comments
 import com.example.navigationcomponentsample.App
 import io.reactivex.Observable
 
-class CommentsRepository() {
+class CommentsRepository {
 
     /*
        get comment data from comment list api or from cache by using issue number

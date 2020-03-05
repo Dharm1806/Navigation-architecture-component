@@ -9,8 +9,6 @@
         android:name="com.example.navigationcomponentsample.views.IssuesListFragment"
         android:label="@string/issue_list"
         tools:layout="@layout/issues_list_fragment">
-
-
         <action
             android:id="@+id/issuesListToComment"
             app:destination="@id/commentList" />
@@ -28,7 +26,6 @@
         <deepLink
             android:id="@+id/deepLink"
             app:uri="https://www.navigation.com/locationdetails?issue_number={issue_number}" />
-
     </fragment>
 
 </navigation>

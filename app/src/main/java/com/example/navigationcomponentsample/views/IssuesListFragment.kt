@@ -1,6 +1,5 @@
 package com.example.navigationcomponentsample.views
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dharam.githubissues.repository.model.IssuesModel
@@ -36,7 +36,7 @@ class IssuesListFragment : Fragment(), OnItemClickListener {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         //initialize view model
-        mIssuesListViewModel = ViewModelProviders.of(this).get(IssuesListViewModel::class.java)
+        mIssuesListViewModel = ViewModelProvider(this).get(IssuesListViewModel::class.java)
 
         mIssuesListViewModel.response().observe(activity!!, Observer {
             when(it){

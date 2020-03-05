@@ -38,8 +38,8 @@ class App : Application() {
 
     }
 
-    // function to return intercepter
-    fun provideCacheInterceptor(): Interceptor? = Interceptor { chain ->
+    // function to return interCepter
+    private fun provideCacheInterceptor(): Interceptor? = Interceptor { chain ->
 
         val response: Response = chain.proceed(chain.request())
         // re-write response header to force use of cache
@@ -51,9 +51,9 @@ class App : Application() {
                 .build()
     }
 
-    //return okhttp client
+    //return okHttp client
     private fun provideOkHttpClient(): OkHttpClient? = OkHttpClient.Builder()
-            .addNetworkInterceptor(provideCacheInterceptor())
+            .addNetworkInterceptor(provideCacheInterceptor()!!)
             .cache(provideCache())
             .build()
 
@@ -62,7 +62,7 @@ class App : Application() {
 
         var cache: Cache? = null
         try {
-            cache = Cache(File(applicationContext.getCacheDir(), "http-cache"),
+            cache = Cache(File(applicationContext.cacheDir, "http-cache"),
                     10 * 1024 * 1024) // 10 MB
         } catch (e: Exception) {
         }
